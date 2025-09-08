@@ -1,0 +1,45 @@
+2025-09-05 17:17:15: [INFO] Initializing Server...
+2025-09-05 17:17:15: [INFO] Server configuration loaded successfully.
+2025-09-05 17:17:15: [INFO] Loading active model: OpenCLIP Laion5b
+2025-09-05 17:17:15: [SUCCESS] Active model OpenCLIP Laion5b configured successfully
+2025-09-05 17:17:15: [SUCCESS] Connected to Redis at 192.168.1.51:6380/0
+2025-09-05 17:17:15: [INFO] Index already exists
+2025-09-05 17:17:15: [SUCCESS] Created index idx:image:OPENCLIPXLMRobertaBaseViTB32 with 43259 documents
+2025-09-05 17:17:15: [INFO] Loading open_clip model: xlm-roberta-base-ViT-B-32
+2025-09-05 17:17:15: [ERROR] Missing dependency for open_clip: No module named 'open_clip'
+2025-09-05 17:17:15: [ERROR] Failed to load model.
+2025-09-05 17:17:52: [INFO] Initializing Server...
+2025-09-05 17:17:52: [INFO] Server configuration loaded successfully.
+2025-09-05 17:17:52: [INFO] Loading active model: OpenCLIP Laion5b
+2025-09-05 17:17:52: [SUCCESS] Active model OpenCLIP Laion5b configured successfully
+2025-09-05 17:17:52: [SUCCESS] Connected to Redis at 192.168.1.51:6380/0
+2025-09-05 17:17:52: [INFO] Index already exists
+2025-09-05 17:17:52: [SUCCESS] Created index idx:image:OPENCLIPXLMRobertaBaseViTB32 with 43259 documents
+2025-09-05 17:17:52: [INFO] Loading open_clip model: xlm-roberta-base-ViT-B-32
+2025-09-05 17:17:53: [ERROR] Failed to load model xlm-roberta-base-ViT-B-32: Please `pip install transformers` to use pre-trained HuggingFace models
+2025-09-05 17:17:53: [ERROR] Failed to load model.
+2025-09-05 17:18:08: [INFO] Initializing Server...
+2025-09-05 17:18:08: [INFO] Server configuration loaded successfully.
+2025-09-05 17:18:08: [INFO] Loading active model: OpenCLIP Laion5b
+2025-09-05 17:18:08: [SUCCESS] Active model OpenCLIP Laion5b configured successfully
+2025-09-05 17:18:08: [SUCCESS] Connected to Redis at 192.168.1.51:6380/0
+2025-09-05 17:18:08: [INFO] Index already exists
+2025-09-05 17:18:08: [SUCCESS] Created index idx:image:OPENCLIPXLMRobertaBaseViTB32 with 43259 documents
+2025-09-05 17:18:08: [INFO] Loading open_clip model: xlm-roberta-base-ViT-B-32
+2025-09-05 17:18:14: [SUCCESS] Model xlm-roberta-base-ViT-B-32 loaded successfully
+2025-09-05 17:18:14: [INFO] Started watching directory: /home/kos/Desktop/TestingServer
+2025-09-05 17:18:14: [INFO] Generic file watcher started
+2025-09-05 17:18:14: [INFO] Starting background initialization...
+2025-09-05 17:18:16: [INFO] Processing existing files in background...
+2025-09-05 17:18:16: [INFO] Starting efficient file scanning...
+2025-09-05 17:18:16: [INFO] Scanning directory structure: /home/kos/Desktop/TestingServer
+2025-09-05 17:18:16: [INFO] Found 43259 images and 4743 documents to process
+2025-09-05 17:18:16: [INFO] Processing documents...
+2025-09-05 17:18:16: [INFO] Processing documents batch 1: files 1-100 of 4743
+2025-09-05 17:18:16: [INFO] Processing documents batch 2: files 101-200 of 4743
+2025-09-05 17:18:17: [INFO] Processing documents batch 3: files 201-300 of 4743
+2025-09-05 17:18:17: [INFO] Processing documents batch 4: files 301-400 of 4743
+2025-09-05 17:18:17: [INFO] Processing documents batch 5: files 401-500 of 4743
+2025-09-05 17:18:17: [INFO] Processing documents batch 6: files 501-600 of 4743
+2025-09-05 17:18:18: [INFO] Processing documents batch 7: files 601-700 of 4743
+2025-09-05 17:18:18: [INFO] Processing documents batch 8: files 701-800 of 4743
