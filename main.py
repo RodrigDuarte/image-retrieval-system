@@ -280,8 +280,6 @@ def unload_model():
 @s.app.route("/api/model/status")
 def model_status():
     """Get status of the model"""
-    if s.production:
-        abort(404)
 
     try:
         status = s.controller.get_model_status(s.model_alias)

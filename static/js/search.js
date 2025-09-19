@@ -6,10 +6,12 @@ const loading_indicator = document.getElementById('loading');
 const no_results = document.getElementById('no_results');
 const results_list = document.getElementById('results_list');
 const results_container = document.getElementById('results_container');
+const welcome_section = document.getElementById('welcome_section');
 
 let is_hybrid_search = false;
 let search_toggle_button = null;
 let hybrid_function_select = null;
+let current_model_info = null;
 
 document.addEventListener('DOMContentLoaded', function() {
     initialize_search();
@@ -18,8 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function initialize_search() {
     create_search_toggle();
     create_hybrid_function_selector();
+    create_google_comparison_button();
     setup_event_listeners();
+    setup_example_queries();
     hide_all_result_elements();
+    show_welcome_section();
+    fetch_model_info();
 }
 
 function create_search_toggle() {
@@ -29,13 +35,20 @@ function create_search_toggle() {
     search_toggle_button = document.createElement('button');
     search_toggle_button.className = 'search-toggle';
     search_toggle_button.id = 'search_toggle';
-    search_toggle_button.title = 'Toggle search mode';
+    search_toggle_button.title = 'Loading model information...';
     
     const toggle_text = document.createElement('span');
     toggle_text.id = 'search_toggle_text';
     toggle_text.textContent = 'Normal';
     
+    const info_indicator = document.createElement('span');
+    info_indicator.className = 'model-info-indicator';
+    info_indicator.innerHTML = ' ℹ️';
+    info_indicator.style.fontSize = '12px';
+    info_indicator.style.opacity = '0.7';
+    
     search_toggle_button.appendChild(toggle_text);
+    search_toggle_button.appendChild(info_indicator);
     toggle_container.appendChild(search_toggle_button);
     
     const search_toggle_container = document.getElementById('search_toggle_container');
@@ -81,6 +94,21 @@ function create_hybrid_function_selector() {
     max_results_control.parentElement.appendChild(control_group);
 }
 
+function create_google_comparison_button() {
+    const google_button = document.createElement('button');
+    google_button.type = 'button';
+    google_button.className = 'google-comparison-button';
+    google_button.id = 'google_comparison_button';
+    google_button.title = 'Compare results with Google Images (presidencia.pt only)\nOpens in new tab for side-by-side comparison';
+    google_button.innerHTML = 'Search on Google Images';
+    
+    google_button.addEventListener('click', open_google_comparison);
+    
+    // Add to the search buttons container
+    const search_buttons_container = document.getElementById('search_buttons_container');
+    search_buttons_container.appendChild(google_button);
+}
+
 function setup_event_listeners() {
     search_button.addEventListener('click', perform_search);
     
@@ -102,6 +130,30 @@ function setup_event_listeners() {
     });
 }
 
+function setup_example_queries() {
+    const query_suggestions = document.querySelectorAll('.query-suggestion');
+    
+    query_suggestions.forEach(button => {
+        button.addEventListener('click', function() {
+            const query = this.getAttribute('data-query');
+            search_input.value = query;
+            perform_search();
+        });
+    });
+}
+
+function show_welcome_section() {
+    if (welcome_section) {
+        welcome_section.style.display = 'block';
+    }
+}
+
+function hide_welcome_section() {
+    if (welcome_section) {
+        welcome_section.style.display = 'none';
+    }
+}
+
 function toggle_search_mode() {
     is_hybrid_search = !is_hybrid_search;
     
@@ -121,6 +173,8 @@ function toggle_search_mode() {
         hybrid_function_group.style.display = 'none';
     }
     
+    update_search_toggle_tooltip();
+    
     clear_results();
 }
 
@@ -133,6 +187,8 @@ async function perform_search() {
         show_error_message('Please enter a search query');
         return;
     }
+    
+    hide_welcome_section();
     
     try {
         show_loading();
@@ -351,6 +407,8 @@ function show_warning_message(warning) {
 function clear_results() {
     hide_all_result_elements();
     results_list.innerHTML = '';
+    search_input.value = '';
+    show_welcome_section();
 }
 
 function hide_all_result_elements() {
@@ -363,9 +421,79 @@ function get_search_mode() {
     return is_hybrid_search ? 'hybrid' : 'normal';
 }
 
+function open_google_comparison() {
+    const query = search_input.value.trim();
+    
+    if (!query) {
+        show_error_message('Please enter a search query first');
+        return;
+    }
+    
+    const encoded_query = encodeURIComponent(query);
+    
+    // Construct Google Images search URL with site restriction to presidencia.pt
+    // Using &udm=2 parameter for Google Images search
+    const google_url = `https://www.google.com/search?q=${encoded_query}+site%3Apresidencia.pt&udm=2&hl=en`;
+    
+    window.open(google_url, '_blank', 'noopener,noreferrer');
+}
+
+async function fetch_model_info() {
+    try {
+        const response = await fetch('/api/model/status', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            console.warn('Failed to fetch model info:', response.status);
+            return;
+        }
+
+        const data = await response.json();
+        current_model_info = data;
+        update_search_toggle_tooltip();
+    } catch (error) {
+        console.warn('Error fetching model info:', error);
+    }
+}
+
+function update_search_toggle_tooltip() {
+    if (!search_toggle_button || !current_model_info) {
+        return;
+    }
+
+    const info = current_model_info.info;
+    if (!info) {
+        search_toggle_button.title = 'Toggle search mode';
+        return;
+    }
+
+    const model_name = info.alias || 'Unknown Model';
+    const model_description = info.description || 'No description available';
+    const model_type = info.model_type || 'Unknown Type';
+    const search_mode = is_hybrid_search ? 'Hybrid' : 'Normal';
+    
+    // Create a detailed tooltip
+    const tooltip = `Current Search Mode: ${search_mode}
+Model: ${model_name}
+Type: ${model_type}
+Description: ${model_description}
+
+Click to toggle between Normal and Hybrid search modes`;
+    
+    search_toggle_button.title = tooltip;
+}
+
+// Periodically refresh model info in case it changes
+setInterval(fetch_model_info, 30000); // Refresh every 30 seconds
+
 window.SearchModule = {
     perform_search,
     toggle_search_mode,
     get_search_mode,
-    clear_results
+    clear_results,
+    open_google_comparison
 };
