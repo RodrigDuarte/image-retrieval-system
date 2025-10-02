@@ -129,3 +129,22 @@
     right: 20px;
   }
 }
+
+.notification.info .notification-title {
+  font-weight: 600;
+}
+
+.notification.info .notification-message {
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+@keyframes notification-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.notification.info:not(.show) {
+  animation: notification-pulse 2s ease-in-out infinite;
+}

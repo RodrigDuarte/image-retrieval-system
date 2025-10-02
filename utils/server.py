@@ -41,6 +41,13 @@ class Server:
         self.scheduler_thread = None
         self.scheduler_running = False
 
+        self.dynamic_loading_enabled = False
+        self.unload_timeout_minutes = 10
+        self.model_last_used = None
+        self.unload_timer = None
+        self.model_loading_lock = threading.Lock()
+        self.pending_search_requests = []
+
         self.embedding_progress = {
             "active": False,
             "stage": "",
@@ -88,9 +95,15 @@ class Server:
             )
 
         self.rc = self.controller.rc
-        if not self.controller.load_model(self.model_alias):
-            self.server_log("[ERROR] Failed to load model.")
-            exit(1)
+
+        if not self.dynamic_loading_enabled:
+            if not self.controller.load_model(self.model_alias):
+                self.server_log("[ERROR] Failed to load model.")
+                exit(1)
+        else:
+            self.server_log(
+                "[INFO] Dynamic model loading enabled - model will be loaded on first query."
+            )
 
         self.create_watchers()
 
@@ -136,6 +149,12 @@ class Server:
             self.embedding_schedule = config.get(
                 "embedding_schedule",
                 {"schedule_type": "manual", "start_hour": 1, "interval_hours": 24},
+            )
+
+            dynamic_config = config.get("dynamic_model_loading", {})
+            self.dynamic_loading_enabled = dynamic_config.get("enabled", False)
+            self.unload_timeout_minutes = dynamic_config.get(
+                "unload_timeout_minutes", 10
             )
 
     def try_create_index(self):
@@ -370,15 +389,17 @@ class Server:
     def generate_embeddings(self):
         """Generate embeddings for all images and documents in Redis that don't have embeddings yet."""
         try:
-            loaded_model = self.controller.get_model(self.model_alias)
-            if not loaded_model or loaded_model.loaded != 2:  # ModelStatus.LOADED = 2
+            # Ensure model is loaded (handles dynamic loading)
+            if not self.ensure_model_loaded():
                 return {
                     "success": False,
-                    "error": f"Model {self.model_alias} is not loaded",
+                    "error": f"Failed to load model {self.model_alias}",
                     "processed": 0,
                     "skipped": 0,
                     "errors": 0,
                 }
+
+            loaded_model = self.controller.get_model(self.model_alias)
 
             self.embedding_progress["active"] = True
             self.embedding_progress["start_time"] = time.time()
@@ -649,12 +670,14 @@ class Server:
             return False
 
         try:
-            loaded_model = self.controller.get_model(self.model_alias)
-            if not loaded_model or loaded_model.loaded != 2:  # ModelStatus.LOADED = 2
+            # Ensure model is loaded (handles dynamic loading)
+            if not self.ensure_model_loaded():
                 self.server_log(
-                    f"[WARNING] Cannot generate immediate embedding: Model {self.model_alias} is not loaded"
+                    f"[WARNING] Cannot generate immediate embedding: Failed to load model {self.model_alias}"
                 )
                 return False
+
+            loaded_model = self.controller.get_model(self.model_alias)
 
             existing_embedding = self.rc.hget(redis_key, loaded_model.embedding_name)
             if existing_embedding:
@@ -732,9 +755,97 @@ class Server:
 
         return status
 
+    def reset_unload_timer(self):
+        """Reset the model unload timer"""
+        if self.unload_timer:
+            self.unload_timer.cancel()
+
+        if self.dynamic_loading_enabled:
+            self.unload_timer = threading.Timer(
+                self.unload_timeout_minutes * 60, self.unload_model_after_timeout
+            )
+            self.unload_timer.start()
+
+    def unload_model_after_timeout(self):
+        """Unload the model after timeout period"""
+        with self.model_loading_lock:
+            current_time = time.time()
+            if (
+                self.model_last_used
+                and current_time - self.model_last_used
+                >= self.unload_timeout_minutes * 60
+            ):
+                model_status = self.controller.get_model_status(self.model_alias)
+                if model_status == 2:  # ModelStatus.LOADED
+                    self.server_log(
+                        f"[INFO] Unloading model {self.model_alias} after {self.unload_timeout_minutes} minutes of inactivity"
+                    )
+                    if self.controller.unload_model(self.model_alias):
+                        self.server_log(
+                            f"[SUCCESS] Model {self.model_alias} unloaded successfully"
+                        )
+                    else:
+                        self.server_log(
+                            f"[ERROR] Failed to unload model {self.model_alias}"
+                        )
+
+    def ensure_model_loaded(self):
+        """Ensure the model is loaded for search operations. Returns True if ready, False if loading/failed."""
+        if not self.dynamic_loading_enabled:
+            # If dynamic loading is disabled, model should always be loaded
+            model_status = self.controller.get_model_status(self.model_alias)
+            return model_status == 2  # ModelStatus.LOADED
+
+        with self.model_loading_lock:
+            model_status = self.controller.get_model_status(self.model_alias)
+
+            if model_status == 2:  # ModelStatus.LOADED
+                # Model is already loaded, update last used time and reset timer
+                self.model_last_used = time.time()
+                self.reset_unload_timer()
+                return True
+
+            elif model_status == 1:  # ModelStatus.LOADING
+                # Model is currently loading, return False to indicate not ready
+                return False
+
+            elif model_status == 0:
+                self.server_log(f"[INFO] Loading model {self.model_alias} for query")
+                if self.controller.load_model(self.model_alias):
+                    self.model_last_used = time.time()
+                    self.reset_unload_timer()
+                    self.server_log(
+                        f"[SUCCESS] Model {self.model_alias} loaded successfully"
+                    )
+                    return True
+                else:
+                    self.server_log(f"[ERROR] Failed to load model {self.model_alias}")
+                    return False
+
+            return False
+
+    def get_dynamic_loading_status(self):
+        """Get the current status of dynamic model loading"""
+        model_status = self.controller.get_model_status(self.model_alias)
+        status_names = {0: "unloaded", 1: "loading", 2: "loaded"}
+
+        return {
+            "enabled": self.dynamic_loading_enabled,
+            "unload_timeout_minutes": self.unload_timeout_minutes,
+            "model_status": status_names.get(model_status, "unknown"),
+            "model_last_used": self.model_last_used,
+            "timer_active": self.unload_timer is not None
+            and self.unload_timer.is_alive()
+            if self.unload_timer
+            else False,
+        }
+
     def cleanup(self):
         """Clean up resources when shutting down the server."""
         self.server_log("[INFO] Starting server cleanup...")
+
+        if self.unload_timer:
+            self.unload_timer.cancel()
 
         self.stop_scheduler()
 

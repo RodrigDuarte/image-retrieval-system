@@ -43,3 +43,740 @@
 2025-09-05 17:18:17: [INFO] Processing documents batch 6: files 501-600 of 4743
 2025-09-05 17:18:18: [INFO] Processing documents batch 7: files 601-700 of 4743
 2025-09-05 17:18:18: [INFO] Processing documents batch 8: files 701-800 of 4743
+2025-09-19 22:05:06: [INFO] Initializing Server...
+2025-09-19 22:05:06: [INFO] Server configuration loaded successfully.
+2025-09-19 22:05:06: [INFO] Loading active model: OpenCLIP Laion5b
+2025-09-19 22:05:06: [SUCCESS] Active model OpenCLIP Laion5b configured successfully
+2025-09-19 22:05:06: [SUCCESS] Connected to Redis at 192.168.1.51:6380/0
+2025-09-19 22:05:06: [INFO] Index already exists
+2025-09-19 22:05:06: [SUCCESS] Created index idx:image:OPENCLIPXLMRobertaBaseViTB32 with 43256 documents
+2025-09-19 22:05:06: [INFO] Loading open_clip model: xlm-roberta-base-ViT-B-32
+2025-09-19 22:05:15: [SUCCESS] Model xlm-roberta-base-ViT-B-32 loaded successfully
+2025-09-19 22:05:15: [INFO] Started watching directory: /home/kos/Desktop/TestingServer
+2025-09-19 22:05:15: [INFO] Generic file watcher started
+2025-09-19 22:05:15: [INFO] Starting background initialization...
+2025-09-19 22:05:17: [INFO] Processing existing files in background...
+2025-09-19 22:05:17: [INFO] Starting efficient file scanning...
+2025-09-19 22:05:17: [INFO] Scanning directory structure: /home/kos/Desktop/TestingServer
+2025-09-19 22:05:17: [INFO] Found 43259 images and 4743 documents to process
+2025-09-19 22:05:17: [INFO] Processing documents...
+2025-09-19 22:05:17: [INFO] Processing documents batch 1: files 1-100 of 4743
+2025-09-19 22:05:18: [INFO] Processing documents batch 2: files 101-200 of 4743
+2025-09-19 22:05:18: [INFO] Processing documents batch 3: files 201-300 of 4743
+2025-09-19 22:05:18: [INFO] Processing documents batch 4: files 301-400 of 4743
+2025-09-19 22:05:19: [INFO] Processing documents batch 5: files 401-500 of 4743
+2025-09-19 22:05:19: [INFO] Processing documents batch 6: files 501-600 of 4743
+2025-09-19 22:05:19: [INFO] Processing documents batch 7: files 601-700 of 4743
+2025-09-19 22:05:19: [INFO] Processing documents batch 8: files 701-800 of 4743
+2025-09-19 22:05:20: [INFO] Processing documents batch 9: files 801-900 of 4743
+2025-09-19 22:05:20: [INFO] Processing documents batch 10: files 901-1000 of 4743
+2025-09-19 22:05:20: [INFO] Processing documents batch 11: files 1001-1100 of 4743
+2025-09-19 22:05:20: [INFO] Processing documents batch 12: files 1101-1200 of 4743
+2025-09-19 22:05:21: [INFO] Processing documents batch 13: files 1201-1300 of 4743
+2025-09-19 22:05:21: [INFO] Processing documents batch 14: files 1301-1400 of 4743
+2025-09-19 22:05:21: [INFO] Processing documents batch 15: files 1401-1500 of 4743
+2025-09-19 22:05:21: [INFO] Processing documents batch 16: files 1501-1600 of 4743
+2025-09-19 22:05:22: [INFO] Processing documents batch 17: files 1601-1700 of 4743
+2025-09-19 22:05:22: [INFO] Processing documents batch 18: files 1701-1800 of 4743
+2025-09-19 22:05:22: [INFO] Processing documents batch 19: files 1801-1900 of 4743
+2025-09-19 22:05:23: [INFO] Processing documents batch 20: files 1901-2000 of 4743
+2025-09-19 22:05:23: [INFO] Processing documents batch 21: files 2001-2100 of 4743
+2025-09-19 22:05:23: [INFO] Processing documents batch 22: files 2101-2200 of 4743
+2025-09-19 22:05:23: [INFO] Processing documents batch 23: files 2201-2300 of 4743
+2025-09-19 22:05:24: [INFO] Processing documents batch 24: files 2301-2400 of 4743
+2025-09-19 22:05:24: [INFO] Processing documents batch 25: files 2401-2500 of 4743
+2025-09-19 22:05:24: [INFO] Processing documents batch 26: files 2501-2600 of 4743
+2025-09-19 22:05:24: [INFO] Processing documents batch 27: files 2601-2700 of 4743
+2025-09-19 22:05:25: [INFO] Processing documents batch 28: files 2701-2800 of 4743
+2025-09-19 22:05:25: [INFO] Processing documents batch 29: files 2801-2900 of 4743
+2025-09-19 22:05:25: [INFO] Processing documents batch 30: files 2901-3000 of 4743
+2025-09-19 22:05:26: [INFO] Processing documents batch 31: files 3001-3100 of 4743
+2025-09-19 22:05:26: [INFO] Processing documents batch 32: files 3101-3200 of 4743
+2025-09-19 22:05:26: [INFO] Processing documents batch 33: files 3201-3300 of 4743
+2025-09-19 22:05:26: [INFO] Processing documents batch 34: files 3301-3400 of 4743
+2025-09-19 22:05:27: [INFO] Processing documents batch 35: files 3401-3500 of 4743
+2025-09-19 22:05:27: [INFO] Processing documents batch 36: files 3501-3600 of 4743
+2025-09-19 22:05:27: [INFO] Processing documents batch 37: files 3601-3700 of 4743
+2025-09-19 22:05:28: [INFO] Processing documents batch 38: files 3701-3800 of 4743
+2025-09-19 22:05:28: [INFO] Processing documents batch 39: files 3801-3900 of 4743
+2025-09-19 22:05:28: [INFO] Processing documents batch 40: files 3901-4000 of 4743
+2025-09-19 22:05:28: [INFO] Processing documents batch 41: files 4001-4100 of 4743
+2025-09-19 22:05:29: [INFO] Processing documents batch 42: files 4101-4200 of 4743
+2025-09-19 22:05:29: [INFO] Processing documents batch 43: files 4201-4300 of 4743
+2025-09-19 22:05:29: [INFO] Processing documents batch 44: files 4301-4400 of 4743
+2025-09-19 22:05:30: [INFO] Processing documents batch 45: files 4401-4500 of 4743
+2025-09-19 22:05:30: [INFO] Processing documents batch 46: files 4501-4600 of 4743
+2025-09-19 22:05:30: [INFO] Processing documents batch 47: files 4601-4700 of 4743
+2025-09-19 22:05:31: [INFO] Processing documents batch 48: files 4701-4743 of 4743
+2025-09-19 22:05:31: [INFO] Documents processing completed. Processed 0 documents
+2025-09-19 22:05:31: [INFO] Processing images in batches...
+2025-09-19 22:05:31: [INFO] Processing images batch 1: files 1-100 of 43259
+2025-09-19 22:05:32: [INFO] Processing images batch 2: files 101-200 of 43259
+2025-09-19 22:05:33: [INFO] Processing images batch 3: files 201-300 of 43259
+2025-09-19 22:05:34: [INFO] Processing images batch 4: files 301-400 of 43259
+2025-09-19 22:05:35: [INFO] Processing images batch 5: files 401-500 of 43259
+2025-09-19 22:05:36: [INFO] Processing images batch 6: files 501-600 of 43259
+2025-09-19 22:05:38: [INFO] Processing images batch 7: files 601-700 of 43259
+2025-09-19 22:05:39: [INFO] Processing images batch 8: files 701-800 of 43259
+2025-09-19 22:05:40: [INFO] Processing images batch 9: files 801-900 of 43259
+2025-09-19 22:05:41: [INFO] Processing images batch 10: files 901-1000 of 43259
+2025-09-19 22:05:42: [INFO] Processing images batch 11: files 1001-1100 of 43259
+2025-09-19 22:05:43: [INFO] Processing images batch 12: files 1101-1200 of 43259
+2025-09-19 22:05:44: [INFO] Processing images batch 13: files 1201-1300 of 43259
+2025-09-19 22:05:45: [INFO] Processing images batch 14: files 1301-1400 of 43259
+2025-09-19 22:05:46: [INFO] Processing images batch 15: files 1401-1500 of 43259
+2025-09-19 22:05:47: [INFO] Processing images batch 16: files 1501-1600 of 43259
+2025-09-19 22:05:48: [INFO] Processing images batch 17: files 1601-1700 of 43259
+2025-09-19 22:05:49: [INFO] Processing images batch 18: files 1701-1800 of 43259
+2025-09-19 22:05:50: [INFO] Processing images batch 19: files 1801-1900 of 43259
+2025-09-19 22:05:51: [INFO] Processing images batch 20: files 1901-2000 of 43259
+2025-09-19 22:05:52: [INFO] Processing images batch 21: files 2001-2100 of 43259
+2025-09-19 22:05:54: [INFO] Processing images batch 22: files 2101-2200 of 43259
+2025-09-19 22:05:55: [INFO] Processing images batch 23: files 2201-2300 of 43259
+2025-09-19 22:05:56: [INFO] Processing images batch 24: files 2301-2400 of 43259
+2025-09-19 22:05:57: [INFO] Processing images batch 25: files 2401-2500 of 43259
+2025-09-19 22:05:58: [INFO] Processing images batch 26: files 2501-2600 of 43259
+2025-09-19 22:05:59: [INFO] Processing images batch 27: files 2601-2700 of 43259
+2025-09-19 22:06:00: [INFO] Processing images batch 28: files 2701-2800 of 43259
+2025-09-19 22:06:01: [INFO] Processing images batch 29: files 2801-2900 of 43259
+2025-09-19 22:06:03: [INFO] Processing images batch 30: files 2901-3000 of 43259
+2025-09-19 22:06:04: [INFO] Processing images batch 31: files 3001-3100 of 43259
+2025-09-19 22:06:05: [INFO] Processing images batch 32: files 3101-3200 of 43259
+2025-09-19 22:06:06: [INFO] Processing images batch 33: files 3201-3300 of 43259
+2025-09-19 22:06:07: [INFO] Processing images batch 34: files 3301-3400 of 43259
+2025-09-19 22:06:08: [INFO] Processing images batch 35: files 3401-3500 of 43259
+2025-09-19 22:06:09: [INFO] Processing images batch 36: files 3501-3600 of 43259
+2025-09-19 22:06:10: [INFO] Processing images batch 37: files 3601-3700 of 43259
+2025-09-19 22:06:12: [INFO] Processing images batch 38: files 3701-3800 of 43259
+2025-09-19 22:06:13: [INFO] Processing images batch 39: files 3801-3900 of 43259
+2025-09-19 22:06:14: [INFO] Processing images batch 40: files 3901-4000 of 43259
+2025-09-19 22:06:15: [INFO] Processing images batch 41: files 4001-4100 of 43259
+2025-09-19 22:06:16: [INFO] Processing images batch 42: files 4101-4200 of 43259
+2025-09-19 22:06:17: [INFO] Processing images batch 43: files 4201-4300 of 43259
+2025-09-19 22:06:18: [INFO] Processing images batch 44: files 4301-4400 of 43259
+2025-09-19 22:06:19: [INFO] Processing images batch 45: files 4401-4500 of 43259
+2025-09-19 22:06:20: [INFO] Processing images batch 46: files 4501-4600 of 43259
+2025-09-19 22:06:21: [INFO] Processing images batch 47: files 4601-4700 of 43259
+2025-09-19 22:06:22: [INFO] Processing images batch 48: files 4701-4800 of 43259
+2025-09-19 22:06:24: [INFO] Processing images batch 49: files 4801-4900 of 43259
+2025-09-19 22:06:25: [INFO] Processing images batch 50: files 4901-5000 of 43259
+2025-09-19 22:06:26: [INFO] Processing images batch 51: files 5001-5100 of 43259
+2025-09-19 22:06:27: [INFO] Processing images batch 52: files 5101-5200 of 43259
+2025-09-19 22:06:28: [INFO] Processing images batch 53: files 5201-5300 of 43259
+2025-09-19 22:06:29: [INFO] Processing images batch 54: files 5301-5400 of 43259
+2025-09-19 22:06:30: [INFO] Processing images batch 55: files 5401-5500 of 43259
+2025-09-19 22:06:31: [INFO] Processing images batch 56: files 5501-5600 of 43259
+2025-09-19 22:06:32: [INFO] Processing images batch 57: files 5601-5700 of 43259
+2025-09-19 22:06:33: [INFO] Processing images batch 58: files 5701-5800 of 43259
+2025-09-19 22:06:34: [INFO] Processing images batch 59: files 5801-5900 of 43259
+2025-09-19 22:06:36: [INFO] Processing images batch 60: files 5901-6000 of 43259
+2025-09-19 22:06:37: [INFO] Processing images batch 61: files 6001-6100 of 43259
+2025-09-19 22:06:38: [INFO] Processing images batch 62: files 6101-6200 of 43259
+2025-09-19 22:06:39: [INFO] Processing images batch 63: files 6201-6300 of 43259
+2025-09-19 22:06:40: [INFO] Processing images batch 64: files 6301-6400 of 43259
+2025-09-19 22:06:41: [INFO] Processing images batch 65: files 6401-6500 of 43259
+2025-09-19 22:06:42: [INFO] Processing images batch 66: files 6501-6600 of 43259
+2025-09-19 22:06:43: [INFO] Processing images batch 67: files 6601-6700 of 43259
+2025-09-19 22:06:45: [INFO] Processing images batch 68: files 6701-6800 of 43259
+2025-09-19 22:06:46: [INFO] Processing images batch 69: files 6801-6900 of 43259
+2025-09-19 22:06:47: [INFO] Processing images batch 70: files 6901-7000 of 43259
+2025-09-19 22:06:48: [INFO] Processing images batch 71: files 7001-7100 of 43259
+2025-09-19 22:06:49: [INFO] Processing images batch 72: files 7101-7200 of 43259
+2025-09-19 22:06:50: [INFO] Processing images batch 73: files 7201-7300 of 43259
+2025-09-19 22:06:51: [INFO] Processing images batch 74: files 7301-7400 of 43259
+2025-09-19 22:06:52: [INFO] Processing images batch 75: files 7401-7500 of 43259
+2025-09-19 22:06:53: [INFO] Processing images batch 76: files 7501-7600 of 43259
+2025-09-19 22:06:55: [INFO] Processing images batch 77: files 7601-7700 of 43259
+2025-09-19 22:06:56: [INFO] Processing images batch 78: files 7701-7800 of 43259
+2025-09-19 22:06:57: [INFO] Processing images batch 79: files 7801-7900 of 43259
+2025-09-19 22:06:58: [INFO] Processing images batch 80: files 7901-8000 of 43259
+2025-09-19 22:06:59: [INFO] Processing images batch 81: files 8001-8100 of 43259
+2025-09-19 22:07:00: [INFO] Processing images batch 82: files 8101-8200 of 43259
+2025-09-19 22:07:01: [INFO] Processing images batch 83: files 8201-8300 of 43259
+2025-09-19 22:07:02: [INFO] Processing images batch 84: files 8301-8400 of 43259
+2025-09-19 22:07:03: [INFO] Processing images batch 85: files 8401-8500 of 43259
+2025-09-19 22:07:04: [INFO] Processing images batch 86: files 8501-8600 of 43259
+2025-09-19 22:07:05: [INFO] Processing images batch 87: files 8601-8700 of 43259
+2025-09-19 22:07:06: [INFO] Processing images batch 88: files 8701-8800 of 43259
+2025-09-19 22:07:07: [INFO] Processing images batch 89: files 8801-8900 of 43259
+2025-09-19 22:07:09: [INFO] Processing images batch 90: files 8901-9000 of 43259
+2025-09-19 22:07:10: [INFO] Processing images batch 91: files 9001-9100 of 43259
+2025-09-19 22:07:11: [INFO] Processing images batch 92: files 9101-9200 of 43259
+2025-09-19 22:07:12: [INFO] Processing images batch 93: files 9201-9300 of 43259
+2025-09-19 22:07:13: [INFO] Processing images batch 94: files 9301-9400 of 43259
+2025-09-19 22:07:14: [INFO] Processing images batch 95: files 9401-9500 of 43259
+2025-09-19 22:07:15: [INFO] Processing images batch 96: files 9501-9600 of 43259
+2025-09-19 22:07:16: [INFO] Processing images batch 97: files 9601-9700 of 43259
+2025-09-19 22:07:17: [INFO] Processing images batch 98: files 9701-9800 of 43259
+2025-09-19 22:07:18: [INFO] Processing images batch 99: files 9801-9900 of 43259
+2025-09-19 22:07:20: [INFO] Processing images batch 100: files 9901-10000 of 43259
+2025-09-19 22:07:21: [INFO] Processing images batch 101: files 10001-10100 of 43259
+2025-09-19 22:07:22: [INFO] Processing images batch 102: files 10101-10200 of 43259
+2025-09-19 22:07:23: [INFO] Processing images batch 103: files 10201-10300 of 43259
+2025-09-19 22:07:24: [INFO] Processing images batch 104: files 10301-10400 of 43259
+2025-09-19 22:07:25: [INFO] Processing images batch 105: files 10401-10500 of 43259
+2025-09-19 22:07:26: [INFO] Processing images batch 106: files 10501-10600 of 43259
+2025-09-19 22:07:27: [INFO] Processing images batch 107: files 10601-10700 of 43259
+2025-09-19 22:07:28: [INFO] Processing images batch 108: files 10701-10800 of 43259
+2025-09-19 22:07:30: [INFO] Processing images batch 109: files 10801-10900 of 43259
+2025-09-19 22:07:31: [INFO] Processing images batch 110: files 10901-11000 of 43259
+2025-09-19 22:07:32: [INFO] Processing images batch 111: files 11001-11100 of 43259
+2025-09-19 22:07:33: [INFO] Processing images batch 112: files 11101-11200 of 43259
+2025-09-19 22:07:34: [INFO] Processing images batch 113: files 11201-11300 of 43259
+2025-09-19 22:07:35: [INFO] Processing images batch 114: files 11301-11400 of 43259
+2025-09-19 22:07:36: [INFO] Processing images batch 115: files 11401-11500 of 43259
+2025-09-19 22:07:37: [INFO] Processing images batch 116: files 11501-11600 of 43259
+2025-09-19 22:07:38: [INFO] Processing images batch 117: files 11601-11700 of 43259
+2025-09-19 22:07:39: [INFO] Processing images batch 118: files 11701-11800 of 43259
+2025-09-19 22:07:41: [INFO] Processing images batch 119: files 11801-11900 of 43259
+2025-09-19 22:07:42: [INFO] Processing images batch 120: files 11901-12000 of 43259
+2025-09-19 22:07:43: [INFO] Processing images batch 121: files 12001-12100 of 43259
+2025-09-19 22:07:44: [INFO] Processing images batch 122: files 12101-12200 of 43259
+2025-09-19 22:07:45: [INFO] Processing images batch 123: files 12201-12300 of 43259
+2025-09-19 22:07:46: [INFO] Processing images batch 124: files 12301-12400 of 43259
+2025-09-19 22:07:47: [INFO] Processing images batch 125: files 12401-12500 of 43259
+2025-09-19 22:07:48: [INFO] Processing images batch 126: files 12501-12600 of 43259
+2025-09-19 22:07:49: [INFO] Processing images batch 127: files 12601-12700 of 43259
+2025-09-19 22:07:50: [INFO] Processing images batch 128: files 12701-12800 of 43259
+2025-09-19 22:07:51: [INFO] Processing images batch 129: files 12801-12900 of 43259
+2025-09-19 22:07:52: [INFO] Processing images batch 130: files 12901-13000 of 43259
+2025-09-19 22:07:53: [INFO] Processing images batch 131: files 13001-13100 of 43259
+2025-09-19 22:07:54: [INFO] Processing images batch 132: files 13101-13200 of 43259
+2025-09-19 22:07:55: [INFO] Processing images batch 133: files 13201-13300 of 43259
+2025-09-19 22:07:56: [INFO] Processing images batch 134: files 13301-13400 of 43259
+2025-09-19 22:07:58: [INFO] Processing images batch 135: files 13401-13500 of 43259
+2025-09-19 22:07:59: [INFO] Processing images batch 136: files 13501-13600 of 43259
+2025-09-19 22:08:00: [INFO] Processing images batch 137: files 13601-13700 of 43259
+2025-09-19 22:08:01: [INFO] Processing images batch 138: files 13701-13800 of 43259
+2025-09-19 22:08:02: [INFO] Processing images batch 139: files 13801-13900 of 43259
+2025-09-19 22:08:03: [INFO] Processing images batch 140: files 13901-14000 of 43259
+2025-09-19 22:08:04: [INFO] Processing images batch 141: files 14001-14100 of 43259
+2025-09-19 22:08:05: [INFO] Processing images batch 142: files 14101-14200 of 43259
+2025-09-19 22:08:06: [INFO] Processing images batch 143: files 14201-14300 of 43259
+2025-09-19 22:08:08: [INFO] Processing images batch 144: files 14301-14400 of 43259
+2025-09-19 22:08:09: [INFO] Processing images batch 145: files 14401-14500 of 43259
+2025-09-19 22:08:10: [INFO] Processing images batch 146: files 14501-14600 of 43259
+2025-09-19 22:08:11: [INFO] Processing images batch 147: files 14601-14700 of 43259
+2025-09-19 22:08:12: [INFO] Processing images batch 148: files 14701-14800 of 43259
+2025-09-19 22:08:13: [INFO] Processing images batch 149: files 14801-14900 of 43259
+2025-09-19 22:08:14: [INFO] Processing images batch 150: files 14901-15000 of 43259
+2025-09-19 22:08:16: [INFO] Processing images batch 151: files 15001-15100 of 43259
+2025-09-19 22:08:17: [INFO] Processing images batch 152: files 15101-15200 of 43259
+2025-09-19 22:08:18: [INFO] Processing images batch 153: files 15201-15300 of 43259
+2025-09-19 22:08:19: [INFO] Processing images batch 154: files 15301-15400 of 43259
+2025-09-19 22:08:20: [INFO] Processing images batch 155: files 15401-15500 of 43259
+2025-09-19 22:08:21: [INFO] Processing images batch 156: files 15501-15600 of 43259
+2025-09-19 22:08:22: [INFO] Processing images batch 157: files 15601-15700 of 43259
+2025-09-19 22:08:23: [INFO] Processing images batch 158: files 15701-15800 of 43259
+2025-09-19 22:08:24: [INFO] Processing images batch 159: files 15801-15900 of 43259
+2025-09-19 22:08:26: [INFO] Processing images batch 160: files 15901-16000 of 43259
+2025-09-19 22:08:27: [INFO] Processing images batch 161: files 16001-16100 of 43259
+2025-09-19 22:08:28: [INFO] Processing images batch 162: files 16101-16200 of 43259
+2025-09-19 22:08:29: [INFO] Processing images batch 163: files 16201-16300 of 43259
+2025-09-19 22:08:30: [INFO] Processing images batch 164: files 16301-16400 of 43259
+2025-09-19 22:08:31: [INFO] Processing images batch 165: files 16401-16500 of 43259
+2025-09-19 22:08:32: [INFO] Processing images batch 166: files 16501-16600 of 43259
+2025-09-19 22:08:33: [INFO] Processing images batch 167: files 16601-16700 of 43259
+2025-09-19 22:08:34: [INFO] Processing images batch 168: files 16701-16800 of 43259
+2025-09-19 22:08:36: [INFO] Processing images batch 169: files 16801-16900 of 43259
+2025-09-19 22:08:37: [INFO] Processing images batch 170: files 16901-17000 of 43259
+2025-09-19 22:08:38: [INFO] Processing images batch 171: files 17001-17100 of 43259
+2025-09-19 22:08:39: [INFO] Processing images batch 172: files 17101-17200 of 43259
+2025-09-19 22:08:40: [INFO] Processing images batch 173: files 17201-17300 of 43259
+2025-09-19 22:08:41: [INFO] Processing images batch 174: files 17301-17400 of 43259
+2025-09-19 22:08:42: [INFO] Processing images batch 175: files 17401-17500 of 43259
+2025-09-19 22:08:43: [INFO] Processing images batch 176: files 17501-17600 of 43259
+2025-09-19 22:08:44: [INFO] Processing images batch 177: files 17601-17700 of 43259
+2025-09-19 22:08:46: [INFO] Processing images batch 178: files 17701-17800 of 43259
+2025-09-19 22:08:47: [INFO] Processing images batch 179: files 17801-17900 of 43259
+2025-09-19 22:08:48: [INFO] Processing images batch 180: files 17901-18000 of 43259
+2025-09-19 22:08:49: [INFO] Processing images batch 181: files 18001-18100 of 43259
+2025-09-19 22:08:50: [INFO] Processing images batch 182: files 18101-18200 of 43259
+2025-09-19 22:08:51: [INFO] Processing images batch 183: files 18201-18300 of 43259
+2025-09-19 22:08:52: [INFO] Processing images batch 184: files 18301-18400 of 43259
+2025-09-19 22:08:53: [INFO] Processing images batch 185: files 18401-18500 of 43259
+2025-09-19 22:08:54: [INFO] Processing images batch 186: files 18501-18600 of 43259
+2025-09-19 22:08:55: [INFO] Processing images batch 187: files 18601-18700 of 43259
+2025-09-19 22:08:56: [INFO] Processing images batch 188: files 18701-18800 of 43259
+2025-09-19 22:08:57: [INFO] Processing images batch 189: files 18801-18900 of 43259
+2025-09-19 22:08:58: [INFO] Processing images batch 190: files 18901-19000 of 43259
+2025-09-19 22:08:59: [INFO] Processing images batch 191: files 19001-19100 of 43259
+2025-09-19 22:09:00: [INFO] Processing images batch 192: files 19101-19200 of 43259
+2025-09-19 22:09:01: [INFO] Processing images batch 193: files 19201-19300 of 43259
+2025-09-19 22:09:02: [INFO] Processing images batch 194: files 19301-19400 of 43259
+2025-09-19 22:09:03: [INFO] Processing images batch 195: files 19401-19500 of 43259
+2025-09-19 22:09:04: [INFO] Processing images batch 196: files 19501-19600 of 43259
+2025-09-19 22:09:05: [INFO] Processing images batch 197: files 19601-19700 of 43259
+2025-09-19 22:09:06: [INFO] Processing images batch 198: files 19701-19800 of 43259
+2025-09-19 22:09:07: [INFO] Processing images batch 199: files 19801-19900 of 43259
+2025-09-19 22:09:08: [INFO] Processing images batch 200: files 19901-20000 of 43259
+2025-09-19 22:09:09: [INFO] Processing images batch 201: files 20001-20100 of 43259
+2025-09-19 22:09:10: [INFO] Processing images batch 202: files 20101-20200 of 43259
+2025-09-19 22:09:11: [INFO] Processing images batch 203: files 20201-20300 of 43259
+2025-09-19 22:09:13: [INFO] Processing images batch 204: files 20301-20400 of 43259
+2025-09-19 22:09:14: [INFO] Processing images batch 205: files 20401-20500 of 43259
+2025-09-19 22:09:15: [INFO] Processing images batch 206: files 20501-20600 of 43259
+2025-09-19 22:09:16: [INFO] Processing images batch 207: files 20601-20700 of 43259
+2025-09-19 22:09:17: [INFO] Processing images batch 208: files 20701-20800 of 43259
+2025-09-19 22:09:18: [INFO] Processing images batch 209: files 20801-20900 of 43259
+2025-09-19 22:09:19: [INFO] Processing images batch 210: files 20901-21000 of 43259
+2025-09-19 22:09:20: [INFO] Processing images batch 211: files 21001-21100 of 43259
+2025-09-19 22:09:21: [INFO] Processing images batch 212: files 21101-21200 of 43259
+2025-09-19 22:09:22: [INFO] Processing images batch 213: files 21201-21300 of 43259
+2025-09-19 22:09:23: [INFO] Processing images batch 214: files 21301-21400 of 43259
+2025-09-19 22:09:24: [INFO] Processing images batch 215: files 21401-21500 of 43259
+2025-09-19 22:09:25: [INFO] Processing images batch 216: files 21501-21600 of 43259
+2025-09-19 22:09:26: [INFO] Processing images batch 217: files 21601-21700 of 43259
+2025-09-19 22:09:27: [INFO] Processing images batch 218: files 21701-21800 of 43259
+2025-09-19 22:09:28: [INFO] Processing images batch 219: files 21801-21900 of 43259
+2025-09-19 22:09:29: [INFO] Processing images batch 220: files 21901-22000 of 43259
+2025-09-19 22:09:30: [INFO] Processing images batch 221: files 22001-22100 of 43259
+2025-09-19 22:09:31: [INFO] Processing images batch 222: files 22101-22200 of 43259
+2025-09-19 22:09:32: [INFO] Processing images batch 223: files 22201-22300 of 43259
+2025-09-19 22:09:33: [INFO] Processing images batch 224: files 22301-22400 of 43259
+2025-09-19 22:09:34: [INFO] Processing images batch 225: files 22401-22500 of 43259
+2025-09-19 22:09:35: [INFO] Processing images batch 226: files 22501-22600 of 43259
+2025-09-19 22:09:36: [INFO] Processing images batch 227: files 22601-22700 of 43259
+2025-09-19 22:09:37: [INFO] Processing images batch 228: files 22701-22800 of 43259
+2025-09-19 22:09:38: [INFO] Processing images batch 229: files 22801-22900 of 43259
+2025-09-19 22:09:39: [INFO] Processing images batch 230: files 22901-23000 of 43259
+2025-09-19 22:09:40: [INFO] Processing images batch 231: files 23001-23100 of 43259
+2025-09-19 22:09:41: [INFO] Processing images batch 232: files 23101-23200 of 43259
+2025-09-19 22:09:42: [INFO] Processing images batch 233: files 23201-23300 of 43259
+2025-09-19 22:09:43: [INFO] Processing images batch 234: files 23301-23400 of 43259
+2025-09-19 22:09:44: [INFO] Processing images batch 235: files 23401-23500 of 43259
+2025-09-19 22:09:45: [INFO] Processing images batch 236: files 23501-23600 of 43259
+2025-09-19 22:09:46: [INFO] Processing images batch 237: files 23601-23700 of 43259
+2025-09-19 22:09:47: [INFO] Processing images batch 238: files 23701-23800 of 43259
+2025-09-19 22:09:48: [INFO] Processing images batch 239: files 23801-23900 of 43259
+2025-09-19 22:09:49: [INFO] Processing images batch 240: files 23901-24000 of 43259
+2025-09-19 22:09:50: [INFO] Processing images batch 241: files 24001-24100 of 43259
+2025-09-19 22:09:51: [INFO] Processing images batch 242: files 24101-24200 of 43259
+2025-09-19 22:09:52: [INFO] Processing images batch 243: files 24201-24300 of 43259
+2025-09-19 22:09:53: [INFO] Processing images batch 244: files 24301-24400 of 43259
+2025-09-19 22:09:54: [INFO] Processing images batch 245: files 24401-24500 of 43259
+2025-09-19 22:09:55: [INFO] Processing images batch 246: files 24501-24600 of 43259
+2025-09-19 22:09:56: [INFO] Processing images batch 247: files 24601-24700 of 43259
+2025-09-19 22:09:57: [INFO] Processing images batch 248: files 24701-24800 of 43259
+2025-09-19 22:09:58: [INFO] Processing images batch 249: files 24801-24900 of 43259
+2025-09-19 22:09:59: [INFO] Processing images batch 250: files 24901-25000 of 43259
+2025-09-19 22:10:00: [INFO] Processing images batch 251: files 25001-25100 of 43259
+2025-09-19 22:10:01: [INFO] Processing images batch 252: files 25101-25200 of 43259
+2025-09-19 22:10:02: [INFO] Processing images batch 253: files 25201-25300 of 43259
+2025-09-19 22:10:03: [INFO] Processing images batch 254: files 25301-25400 of 43259
+2025-09-19 22:10:04: [INFO] Processing images batch 255: files 25401-25500 of 43259
+2025-09-19 22:10:05: [INFO] Processing images batch 256: files 25501-25600 of 43259
+2025-09-19 22:10:06: [INFO] Processing images batch 257: files 25601-25700 of 43259
+2025-09-19 22:10:07: [INFO] Processing images batch 258: files 25701-25800 of 43259
+2025-09-19 22:10:08: [INFO] Processing images batch 259: files 25801-25900 of 43259
+2025-09-19 22:10:09: [INFO] Processing images batch 260: files 25901-26000 of 43259
+2025-09-19 22:10:10: [INFO] Processing images batch 261: files 26001-26100 of 43259
+2025-09-19 22:10:11: [INFO] Processing images batch 262: files 26101-26200 of 43259
+2025-09-19 22:10:12: [INFO] Processing images batch 263: files 26201-26300 of 43259
+2025-09-19 22:10:13: [INFO] Processing images batch 264: files 26301-26400 of 43259
+2025-09-19 22:10:14: [INFO] Processing images batch 265: files 26401-26500 of 43259
+2025-09-19 22:10:15: [INFO] Processing images batch 266: files 26501-26600 of 43259
+2025-09-19 22:10:16: [INFO] Processing images batch 267: files 26601-26700 of 43259
+2025-09-19 22:10:17: [INFO] Processing images batch 268: files 26701-26800 of 43259
+2025-09-19 22:10:18: [INFO] Processing images batch 269: files 26801-26900 of 43259
+2025-09-19 22:10:19: [INFO] Processing images batch 270: files 26901-27000 of 43259
+2025-09-19 22:10:20: [INFO] Processing images batch 271: files 27001-27100 of 43259
+2025-09-19 22:10:21: [INFO] Processing images batch 272: files 27101-27200 of 43259
+2025-09-19 22:10:22: [INFO] Processing images batch 273: files 27201-27300 of 43259
+2025-09-19 22:10:23: [INFO] Processing images batch 274: files 27301-27400 of 43259
+2025-09-19 22:10:24: [INFO] Processing images batch 275: files 27401-27500 of 43259
+2025-09-19 22:10:25: [INFO] Processing images batch 276: files 27501-27600 of 43259
+2025-09-19 22:10:26: [INFO] Processing images batch 277: files 27601-27700 of 43259
+2025-09-19 22:10:27: [INFO] Processing images batch 278: files 27701-27800 of 43259
+2025-09-19 22:10:28: [INFO] Processing images batch 279: files 27801-27900 of 43259
+2025-09-19 22:10:29: [INFO] Processing images batch 280: files 27901-28000 of 43259
+2025-09-19 22:10:30: [INFO] Processing images batch 281: files 28001-28100 of 43259
+2025-09-19 22:10:31: [INFO] Processing images batch 282: files 28101-28200 of 43259
+2025-09-19 22:10:32: [INFO] Processing images batch 283: files 28201-28300 of 43259
+2025-09-19 22:10:33: [INFO] Processing images batch 284: files 28301-28400 of 43259
+2025-09-19 22:10:34: [INFO] Processing images batch 285: files 28401-28500 of 43259
+2025-09-19 22:10:35: [INFO] Processing images batch 286: files 28501-28600 of 43259
+2025-09-19 22:10:36: [INFO] Processing images batch 287: files 28601-28700 of 43259
+2025-09-19 22:10:37: [INFO] Processing images batch 288: files 28701-28800 of 43259
+2025-09-19 22:10:38: [INFO] Processing images batch 289: files 28801-28900 of 43259
+2025-09-19 22:10:39: [INFO] Processing images batch 290: files 28901-29000 of 43259
+2025-09-19 22:10:40: [INFO] Processing images batch 291: files 29001-29100 of 43259
+2025-09-19 22:10:41: [INFO] Processing images batch 292: files 29101-29200 of 43259
+2025-09-19 22:10:42: [INFO] Processing images batch 293: files 29201-29300 of 43259
+2025-09-19 22:10:43: [INFO] Processing images batch 294: files 29301-29400 of 43259
+2025-09-19 22:10:44: [INFO] Processing images batch 295: files 29401-29500 of 43259
+2025-09-19 22:10:45: [INFO] Processing images batch 296: files 29501-29600 of 43259
+2025-09-19 22:10:46: [INFO] Processing images batch 297: files 29601-29700 of 43259
+2025-09-19 22:10:47: [INFO] Processing images batch 298: files 29701-29800 of 43259
+2025-09-19 22:10:48: [INFO] Processing images batch 299: files 29801-29900 of 43259
+2025-09-19 22:10:49: [INFO] Processing images batch 300: files 29901-30000 of 43259
+2025-09-19 22:10:50: [INFO] Processing images batch 301: files 30001-30100 of 43259
+2025-09-19 22:10:51: [INFO] Processing images batch 302: files 30101-30200 of 43259
+2025-09-19 22:10:52: [INFO] Processing images batch 303: files 30201-30300 of 43259
+2025-09-19 22:10:53: [INFO] Processing images batch 304: files 30301-30400 of 43259
+2025-09-19 22:10:54: [INFO] Processing images batch 305: files 30401-30500 of 43259
+2025-09-19 22:10:55: [INFO] Processing images batch 306: files 30501-30600 of 43259
+2025-09-19 22:10:56: [INFO] Processing images batch 307: files 30601-30700 of 43259
+2025-09-19 22:10:57: [INFO] Processing images batch 308: files 30701-30800 of 43259
+2025-09-19 22:10:58: [INFO] Processing images batch 309: files 30801-30900 of 43259
+2025-09-19 22:10:59: [INFO] Processing images batch 310: files 30901-31000 of 43259
+2025-09-19 22:11:00: [INFO] Processing images batch 311: files 31001-31100 of 43259
+2025-09-19 22:11:01: [INFO] Processing images batch 312: files 31101-31200 of 43259
+2025-09-19 22:11:02: [INFO] Processing images batch 313: files 31201-31300 of 43259
+2025-09-19 22:11:03: [INFO] Processing images batch 314: files 31301-31400 of 43259
+2025-09-19 22:11:04: [INFO] Processing images batch 315: files 31401-31500 of 43259
+2025-09-19 22:11:05: [INFO] Processing images batch 316: files 31501-31600 of 43259
+2025-09-19 22:11:06: [INFO] Processing images batch 317: files 31601-31700 of 43259
+2025-09-19 22:11:07: [INFO] Processing images batch 318: files 31701-31800 of 43259
+2025-09-19 22:11:08: [INFO] Processing images batch 319: files 31801-31900 of 43259
+2025-09-19 22:11:09: [INFO] Processing images batch 320: files 31901-32000 of 43259
+2025-09-19 22:11:10: [INFO] Processing images batch 321: files 32001-32100 of 43259
+2025-09-19 22:11:11: [INFO] Processing images batch 322: files 32101-32200 of 43259
+2025-09-19 22:11:12: [INFO] Processing images batch 323: files 32201-32300 of 43259
+2025-09-19 22:11:13: [INFO] Processing images batch 324: files 32301-32400 of 43259
+2025-09-19 22:11:14: [INFO] Processing images batch 325: files 32401-32500 of 43259
+2025-09-19 22:11:15: [INFO] Processing images batch 326: files 32501-32600 of 43259
+2025-09-19 22:11:16: [INFO] Processing images batch 327: files 32601-32700 of 43259
+2025-09-19 22:11:17: [INFO] Processing images batch 328: files 32701-32800 of 43259
+2025-09-19 22:11:18: [INFO] Processing images batch 329: files 32801-32900 of 43259
+2025-09-19 22:11:19: [INFO] Processing images batch 330: files 32901-33000 of 43259
+2025-09-19 22:11:20: [INFO] Processing images batch 331: files 33001-33100 of 43259
+2025-09-19 22:11:21: [INFO] Processing images batch 332: files 33101-33200 of 43259
+2025-09-19 22:11:22: [INFO] Processing images batch 333: files 33201-33300 of 43259
+2025-09-19 22:11:23: [INFO] Processing images batch 334: files 33301-33400 of 43259
+2025-09-19 22:11:24: [INFO] Processing images batch 335: files 33401-33500 of 43259
+2025-09-19 22:11:25: [INFO] Processing images batch 336: files 33501-33600 of 43259
+2025-09-19 22:11:26: [INFO] Processing images batch 337: files 33601-33700 of 43259
+2025-09-19 22:11:27: [INFO] Processing images batch 338: files 33701-33800 of 43259
+2025-09-19 22:11:28: [INFO] Processing images batch 339: files 33801-33900 of 43259
+2025-09-19 22:11:29: [INFO] Processing images batch 340: files 33901-34000 of 43259
+2025-09-19 22:11:30: [INFO] Processing images batch 341: files 34001-34100 of 43259
+2025-09-19 22:11:31: [INFO] Processing images batch 342: files 34101-34200 of 43259
+2025-09-19 22:11:32: [INFO] Processing images batch 343: files 34201-34300 of 43259
+2025-09-19 22:11:33: [INFO] Processing images batch 344: files 34301-34400 of 43259
+2025-09-19 22:11:34: [INFO] Processing images batch 345: files 34401-34500 of 43259
+2025-09-19 22:11:35: [INFO] Processing images batch 346: files 34501-34600 of 43259
+2025-09-19 22:11:36: [INFO] Processing images batch 347: files 34601-34700 of 43259
+2025-09-19 22:11:37: [INFO] Processing images batch 348: files 34701-34800 of 43259
+2025-09-19 22:11:38: [INFO] Processing images batch 349: files 34801-34900 of 43259
+2025-09-19 22:11:39: [INFO] Processing images batch 350: files 34901-35000 of 43259
+2025-09-19 22:11:40: [INFO] Processing images batch 351: files 35001-35100 of 43259
+2025-09-19 22:11:41: [INFO] Processing images batch 352: files 35101-35200 of 43259
+2025-09-19 22:11:42: [INFO] Processing images batch 353: files 35201-35300 of 43259
+2025-09-19 22:11:43: [INFO] Processing images batch 354: files 35301-35400 of 43259
+2025-09-19 22:11:44: [INFO] Processing images batch 355: files 35401-35500 of 43259
+2025-09-19 22:11:45: [INFO] Processing images batch 356: files 35501-35600 of 43259
+2025-09-19 22:11:46: [INFO] Processing images batch 357: files 35601-35700 of 43259
+2025-09-19 22:11:47: [INFO] Processing images batch 358: files 35701-35800 of 43259
+2025-09-19 22:11:48: [INFO] Processing images batch 359: files 35801-35900 of 43259
+2025-09-19 22:11:50: [INFO] Processing images batch 360: files 35901-36000 of 43259
+2025-09-19 22:11:51: [INFO] Processing images batch 361: files 36001-36100 of 43259
+2025-09-19 22:11:52: [INFO] Processing images batch 362: files 36101-36200 of 43259
+2025-09-19 22:11:52: [INFO] Processing images batch 363: files 36201-36300 of 43259
+2025-09-19 22:11:53: [INFO] Processing images batch 364: files 36301-36400 of 43259
+2025-09-19 22:11:54: [INFO] Processing images batch 365: files 36401-36500 of 43259
+2025-09-19 22:11:55: [INFO] Processing images batch 366: files 36501-36600 of 43259
+2025-09-19 22:11:56: [INFO] Processing images batch 367: files 36601-36700 of 43259
+2025-09-19 22:11:58: [INFO] Processing images batch 368: files 36701-36800 of 43259
+2025-09-19 22:11:58: [INFO] Processing images batch 369: files 36801-36900 of 43259
+2025-09-19 22:11:59: [INFO] Processing images batch 370: files 36901-37000 of 43259
+2025-09-19 22:12:00: [INFO] Processing images batch 371: files 37001-37100 of 43259
+2025-09-19 22:12:01: [INFO] Processing images batch 372: files 37101-37200 of 43259
+2025-09-19 22:12:02: [INFO] Processing images batch 373: files 37201-37300 of 43259
+2025-09-19 22:12:03: [INFO] Processing images batch 374: files 37301-37400 of 43259
+2025-09-19 22:12:04: [INFO] Processing images batch 375: files 37401-37500 of 43259
+2025-09-19 22:12:05: [INFO] Processing images batch 376: files 37501-37600 of 43259
+2025-09-19 22:12:06: [INFO] Processing images batch 377: files 37601-37700 of 43259
+2025-09-19 22:12:07: [INFO] Processing images batch 378: files 37701-37800 of 43259
+2025-09-19 22:12:08: [INFO] Processing images batch 379: files 37801-37900 of 43259
+2025-09-19 22:12:09: [INFO] Processing images batch 380: files 37901-38000 of 43259
+2025-09-19 22:12:10: [INFO] Processing images batch 381: files 38001-38100 of 43259
+2025-09-19 22:12:11: [INFO] Processing images batch 382: files 38101-38200 of 43259
+2025-09-19 22:12:12: [INFO] Processing images batch 383: files 38201-38300 of 43259
+2025-09-19 22:12:13: [INFO] Processing images batch 384: files 38301-38400 of 43259
+2025-09-19 22:12:14: [INFO] Processing images batch 385: files 38401-38500 of 43259
+2025-09-19 22:12:15: [INFO] Processing images batch 386: files 38501-38600 of 43259
+2025-09-19 22:12:16: [INFO] Processing images batch 387: files 38601-38700 of 43259
+2025-09-19 22:12:17: [INFO] Processing images batch 388: files 38701-38800 of 43259
+2025-09-19 22:12:18: [INFO] Processing images batch 389: files 38801-38900 of 43259
+2025-09-19 22:12:19: [INFO] Processing images batch 390: files 38901-39000 of 43259
+2025-09-19 22:12:20: [INFO] Processing images batch 391: files 39001-39100 of 43259
+2025-09-19 22:12:21: [INFO] Processing images batch 392: files 39101-39200 of 43259
+2025-09-19 22:12:22: [INFO] Processing images batch 393: files 39201-39300 of 43259
+2025-09-19 22:12:23: [INFO] Processing images batch 394: files 39301-39400 of 43259
+2025-09-19 22:12:25: [INFO] Processing images batch 395: files 39401-39500 of 43259
+2025-09-19 22:12:26: [INFO] Processing images batch 396: files 39501-39600 of 43259
+2025-09-19 22:12:27: [INFO] Processing images batch 397: files 39601-39700 of 43259
+2025-09-19 22:12:28: [INFO] Processing images batch 398: files 39701-39800 of 43259
+2025-09-19 22:12:29: [INFO] Processing images batch 399: files 39801-39900 of 43259
+2025-09-19 22:12:30: [INFO] Processing images batch 400: files 39901-40000 of 43259
+2025-09-19 22:12:31: [INFO] Processing images batch 401: files 40001-40100 of 43259
+2025-09-19 22:12:32: [INFO] Processing images batch 402: files 40101-40200 of 43259
+2025-09-19 22:12:33: [INFO] Processing images batch 403: files 40201-40300 of 43259
+2025-09-19 22:12:34: [INFO] Processing images batch 404: files 40301-40400 of 43259
+2025-09-19 22:12:35: [INFO] Processing images batch 405: files 40401-40500 of 43259
+2025-09-19 22:12:36: [INFO] Processing images batch 406: files 40501-40600 of 43259
+2025-09-19 22:12:37: [INFO] Processing images batch 407: files 40601-40700 of 43259
+2025-09-19 22:12:38: [INFO] Processing images batch 408: files 40701-40800 of 43259
+2025-09-19 22:12:39: [INFO] Processing images batch 409: files 40801-40900 of 43259
+2025-09-19 22:12:40: [INFO] Processing images batch 410: files 40901-41000 of 43259
+2025-09-19 22:12:41: [INFO] Processing images batch 411: files 41001-41100 of 43259
+2025-09-19 22:12:42: [INFO] Processing images batch 412: files 41101-41200 of 43259
+2025-09-19 22:12:43: [INFO] Processing images batch 413: files 41201-41300 of 43259
+2025-09-19 22:12:44: [INFO] Processing images batch 414: files 41301-41400 of 43259
+2025-09-19 22:12:45: [INFO] Processing images batch 415: files 41401-41500 of 43259
+2025-09-19 22:12:46: [INFO] Processing images batch 416: files 41501-41600 of 43259
+2025-09-19 22:12:47: [INFO] Processing images batch 417: files 41601-41700 of 43259
+2025-09-19 22:12:48: [INFO] Processing images batch 418: files 41701-41800 of 43259
+2025-09-19 22:12:49: [INFO] Processing images batch 419: files 41801-41900 of 43259
+2025-09-19 22:12:50: [INFO] Processing images batch 420: files 41901-42000 of 43259
+2025-09-19 22:12:51: [INFO] Processing images batch 421: files 42001-42100 of 43259
+2025-09-19 22:12:52: [INFO] Processing images batch 422: files 42101-42200 of 43259
+2025-09-19 22:12:53: [INFO] Processing images batch 423: files 42201-42300 of 43259
+2025-09-19 22:12:54: [INFO] Processing images batch 424: files 42301-42400 of 43259
+2025-09-19 22:12:55: [INFO] Processing images batch 425: files 42401-42500 of 43259
+2025-09-19 22:12:56: [INFO] Processing images batch 426: files 42501-42600 of 43259
+2025-09-19 22:12:57: [INFO] Processing images batch 427: files 42601-42700 of 43259
+2025-09-19 22:12:58: [INFO] Processing images batch 428: files 42701-42800 of 43259
+2025-09-19 22:12:59: [INFO] Processing images batch 429: files 42801-42900 of 43259
+2025-09-19 22:13:00: [INFO] Processing images batch 430: files 42901-43000 of 43259
+2025-09-19 22:13:01: [INFO] Processing images batch 431: files 43001-43100 of 43259
+2025-09-19 22:13:02: [INFO] Processing images batch 432: files 43101-43200 of 43259
+2025-09-19 22:13:03: [INFO] Processing images batch 433: files 43201-43259 of 43259
+2025-09-19 22:13:04: [INFO] Images processing completed. Processed 2 images
+2025-09-19 22:13:04: [INFO] Running bulk image-document resolution...
+2025-09-19 22:13:07: [INFO] Bulk resolution completed: 0 images resolved across 0 documents
+2025-09-19 22:13:07: [INFO] Resolved 0 images across 0 documents
+2025-09-19 22:13:07: [INFO] File scan completed. Total processed: 2 files
+2025-09-19 22:13:07: [INFO] Immediate embedding generation mode enabled - embeddings will be generated when files are added
+2025-09-19 22:13:07: [INFO] Background initialization completed.
+2025-09-19 22:34:25: [SUCCESS] Search completed. Found 6 results
+2025-09-19 22:34:25: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e6eaf3f3a1cd8998.jpg
+2025-09-19 22:34:25: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e0e46070342e8cf0.jpg
+2025-09-19 22:34:25: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\d9f8c6ccf0dc583f.jpg
+2025-09-19 22:34:25: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e002556565c5473f.jpg
+2025-09-19 22:34:25: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9272b4b4289ed4fc.jpg
+2025-09-19 22:34:25: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4d6d6ddc1f1707e6.jpg
+2025-09-19 22:34:34: [SUCCESS] Search completed. Found 6 results
+2025-09-19 22:34:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e0e46070342e8cf0.jpg
+2025-09-19 22:34:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e6eaf3f3a1cd8998.jpg
+2025-09-19 22:34:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e002556565c5473f.jpg
+2025-09-19 22:34:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4d6d6ddc1f1707e6.jpg
+2025-09-19 22:34:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\d9f8c6ccf0dc583f.jpg
+2025-09-19 22:34:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9272b4b4289ed4fc.jpg
+2025-09-19 22:44:06: [SUCCESS] Search completed. Found 6 results
+2025-09-19 22:44:06: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b2821e769499999b.jpg
+2025-09-19 22:44:06: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f5e6d2b2a6a49957.jpg
+2025-09-19 22:44:06: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9a929cbe98896f6c.jpg
+2025-09-19 22:44:06: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2b0bb6f2aa3cd9cd.jpg
+2025-09-19 22:44:06: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4449480c3e926494.jpg
+2025-09-19 22:44:06: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4c84c68796b23c7c.jpg
+2025-09-19 22:44:16: [SUCCESS] Search completed. Found 6 results
+2025-09-19 22:44:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b2821e769499999b.jpg
+2025-09-19 22:44:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f5e6d2b2a6a49957.jpg
+2025-09-19 22:44:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9a929cbe98896f6c.jpg
+2025-09-19 22:44:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4449480c3e926494.jpg
+2025-09-19 22:44:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2b0bb6f2aa3cd9cd.jpg
+2025-09-19 22:44:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4c84c68796b23c7c.jpg
+2025-09-19 22:56:16: [SUCCESS] Search completed. Found 6 results
+2025-09-19 22:56:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f5e6d2b2a6a49957.jpg
+2025-09-19 22:56:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4c84c68796b23c7c.jpg
+2025-09-19 22:56:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9a929cbe98896f6c.jpg
+2025-09-19 22:56:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2b0bb6f2aa3cd9cd.jpg
+2025-09-19 22:56:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4449480c3e926494.jpg
+2025-09-19 22:56:16: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b2821e769499999b.jpg
+2025-09-19 22:59:14: [SUCCESS] Search completed. Found 6 results
+2025-09-19 22:59:14: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\68687f71b83174c6.jpg
+2025-09-19 22:59:14: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2bf8a6fecef033b0.jpg
+2025-09-19 22:59:14: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\cccc8c0010800040.jpg
+2025-09-19 22:59:14: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\fef8b1a8faf09cfc.jpg
+2025-09-19 22:59:14: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\c86469696878d4d0.jpg
+2025-09-19 22:59:14: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\3626ecdcd264c7ca.jpg
+2025-09-19 22:59:19: [SUCCESS] Search completed. Found 10 results
+2025-09-19 22:59:19: [SUCCESS] Created index idx:temp:6667271057:OPENCLIPXLMRobertaBaseViTB32 with 100 documents
+2025-09-19 22:59:20: [SUCCESS] Search completed. Found 25 results
+2025-09-19 22:59:20: [SUCCESS] Search completed. Found 10 results
+2025-09-19 22:59:20: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\68687f71b83174c6.jpg
+2025-09-19 22:59:20: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\a1a40b63b0aba9cb.jpg
+2025-09-19 22:59:20: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\cccc8c0010800040.jpg
+2025-09-19 22:59:20: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2bf8a6fecef033b0.jpg
+2025-09-19 22:59:20: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\fef8b1a8faf09cfc.jpg
+2025-09-19 22:59:20: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\3626ecdcd264c7ca.jpg
+2025-09-19 23:03:07: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:07: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\070b0f63393062aa.jpg
+2025-09-19 23:03:07: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\ffe7d6df4dcdce99.jpg
+2025-09-19 23:03:07: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\d31b0b1999e96d8c.jpg
+2025-09-19 23:03:07: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\0d3754131a4c8d0f.jpg
+2025-09-19 23:03:07: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\7d7dfc3e90654786.jpg
+2025-09-19 23:03:07: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\335318188a3a181e.jpg
+2025-09-19 23:03:17: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:17: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\cbc3d1c1d1d1d1f5.jpg
+2025-09-19 23:03:17: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\794d4dcc0f4c4d35.jpg
+2025-09-19 23:03:17: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\8ed7f8ecececccfe.jpg
+2025-09-19 23:03:17: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\68687f71b83174c6.jpg
+2025-09-19 23:03:17: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\ccda426869a09293.jpg
+2025-09-19 23:03:17: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\696b6b6a6e473327.jpg
+2025-09-19 23:03:26: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:26: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\fbd9b5243c383434.jpg
+2025-09-19 23:03:26: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b0b0b292d9d0f4cc.jpg
+2025-09-19 23:03:26: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\babaf8a8ab8c8cbc.jpg
+2025-09-19 23:03:26: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4009adecdfd69cdf.jpg
+2025-09-19 23:03:26: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\66664e4c4c46d6d2.jpg
+2025-09-19 23:03:26: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\223a19190c1cd0d0.jpg
+2025-09-19 23:03:34: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4c4cccdec8e0e4a1.jpg
+2025-09-19 23:03:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\eee6c6cb6e767879.jpg
+2025-09-19 23:03:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\cee3c98392dc1c9a.jpg
+2025-09-19 23:03:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e3e7df9fe4f4b4e4.jpg
+2025-09-19 23:03:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9e46ceccd6c6ceca.jpg
+2025-09-19 23:03:34: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\80bb3e60e1cbc9d9.jpg
+2025-09-19 23:03:39: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:39: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\68687f71b83174c6.jpg
+2025-09-19 23:03:39: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f4f3f0cda990d3cc.jpg
+2025-09-19 23:03:39: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\8ed7f8ecececccfe.jpg
+2025-09-19 23:03:39: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\6757552dadad242e.jpg
+2025-09-19 23:03:39: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b0b00585b7b9dfcc.jpg
+2025-09-19 23:03:39: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f939b751d9fa2c92.jpg
+2025-09-19 23:03:46: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:46: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\fcfcf8f1e9e9f9d8.jpg
+2025-09-19 23:03:46: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\8481310646d69494.jpg
+2025-09-19 23:03:46: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\8ed7f8ecececccfe.jpg
+2025-09-19 23:03:46: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\88c74f483a373278.jpg
+2025-09-19 23:03:46: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9efaa48e8ececcce.jpg
+2025-09-19 23:03:46: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\68d83cbc7435b1d3.jpg
+2025-09-19 23:03:52: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:03:52: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\89cde4e6e7c3d3f3.jpg
+2025-09-19 23:03:52: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\17123a2361080a6c.jpg
+2025-09-19 23:03:52: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e0e0888c8c8ccccc.jpg
+2025-09-19 23:03:52: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\67cf4c4d1f71c9d9.jpg
+2025-09-19 23:03:52: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2ce4dadb909098c8.jpg
+2025-09-19 23:03:52: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\989a92c3d2d2d381.jpg
+2025-09-19 23:04:02: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:04:02: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f878787978787879.jpg
+2025-09-19 23:04:02: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\c86469696878d4d0.jpg
+2025-09-19 23:04:02: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\3c3c3070d8501811.jpg
+2025-09-19 23:04:02: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\c9cbcbc3c3c6c8d8.jpg
+2025-09-19 23:04:02: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\84848c8e1e0e9cb0.jpg
+2025-09-19 23:04:02: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\d8f0f1f1a0a4b398.jpg
+2025-09-19 23:04:08: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:04:08: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\902860606c94ffcf.jpg
+2025-09-19 23:04:08: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\478b32b3b9492dad.jpg
+2025-09-19 23:04:08: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\3eb318346f6e6f73.jpg
+2025-09-19 23:04:08: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\fa6bf9d97bfb7373.jpg
+2025-09-19 23:04:08: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\025ba4b2b6242424.jpg
+2025-09-19 23:04:08: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\804848484c099999.jpg
+2025-09-19 23:04:21: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:04:21: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\3f3f7f7766763676.jpg
+2025-09-19 23:04:21: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9e46ceccd6c6ceca.jpg
+2025-09-19 23:04:21: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\3135253014190d95.jpg
+2025-09-19 23:04:21: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\80bb3e60e1cbc9d9.jpg
+2025-09-19 23:04:21: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f8d0d1d8d8d0d0e0.jpg
+2025-09-19 23:04:21: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\1a983c3c3c3fc3f9.jpg
+2025-09-19 23:04:27: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:04:27: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4d4e9630aabae4cf.jpg
+2025-09-19 23:04:27: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\78f4468689c26c78.jpg
+2025-09-19 23:04:27: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b78cc6c6eca6b65a.jpg
+2025-09-19 23:04:27: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\db9bea66f3f2f6f6.jpg
+2025-09-19 23:04:27: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\129ab9191391c3d6.jpg
+2025-09-19 23:04:27: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4d9b2926a2733350.jpg
+2025-09-19 23:04:36: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:04:36: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\a76d4d585e464c5c.jpg
+2025-09-19 23:04:36: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\0369e9e103135261.jpg
+2025-09-19 23:04:36: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e266e46466e6e7c6.jpg
+2025-09-19 23:04:36: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\2da9392cecccec65.jpg
+2025-09-19 23:04:36: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\c8c8eba6a1c9ddc9.jpg
+2025-09-19 23:04:36: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\a460f2602d393939.jpg
+2025-09-19 23:07:23: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:07:23: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\36969e888d0bd252.jpg
+2025-09-19 23:07:23: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\ecd4544c04889c38.jpg
+2025-09-19 23:07:23: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e9e998c9a52ec8d0.jpg
+2025-09-19 23:07:23: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\d3f3bfd4c29c98e1.jpg
+2025-09-19 23:07:23: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4080c4c96b2aa6c5.jpg
+2025-09-19 23:07:23: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\8e1a79b08961bc1e.jpg
+2025-09-19 23:07:31: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:07:31: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\1c77e060e1236581.jpg
+2025-09-19 23:07:31: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\022281f4788d94ee.jpg
+2025-09-19 23:07:31: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\53d2141c5ea77e9b.jpg
+2025-09-19 23:07:31: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\73a96466c3e1e1d2.jpg
+2025-09-19 23:07:31: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\b7efadfdfb868c9d.jpg
+2025-09-19 23:07:31: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e5e361f1e2c2b890.jpg
+2025-09-19 23:07:40: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:07:40: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f263e5e8a82dcc76.jpg
+2025-09-19 23:07:40: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f8f8f2f2a484c888.jpg
+2025-09-19 23:07:40: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\dc988ccba73232f6.jpg
+2025-09-19 23:07:40: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f6f6ceccdae9a9d3.jpg
+2025-09-19 23:07:40: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\f878787978787879.jpg
+2025-09-19 23:07:40: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\92f8f29ce8f8f8f8.jpg
+2025-09-19 23:08:05: [SUCCESS] Search completed. Found 6 results
+2025-09-19 23:08:05: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\e3e7df9fe4f4b4e4.jpg
+2025-09-19 23:08:05: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\cee3c98392dc1c9a.jpg
+2025-09-19 23:08:05: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\9e46ceccd6c6ceca.jpg
+2025-09-19 23:08:05: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\80bb3e60e1cbc9d9.jpg
+2025-09-19 23:08:05: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\eee6c6cb6e767879.jpg
+2025-09-19 23:08:05: [ERROR] Image file not found on disk: C:\Users\Madalena\PLData\4c4cccdec8e0e4a1.jpg
+2025-10-02 23:57:26: [INFO] Initializing Server...
+2025-10-02 23:57:26: [INFO] Server configuration loaded successfully.
+2025-10-02 23:57:26: [INFO] Loading active model: OpenCLIP Laion5b
+2025-10-02 23:57:26: [SUCCESS] Active model OpenCLIP Laion5b configured successfully
+2025-10-02 23:57:26: [SUCCESS] Connected to Redis at 192.168.1.51:6380/0
+2025-10-02 23:57:26: [ERROR] No documents found with prefix 'image:'. Cannot create index.
+2025-10-02 23:57:26: [INFO] Dynamic model loading enabled - model will be loaded on first query.
+2025-10-02 23:57:26: [INFO] Started watching directory: /home/kos/Desktop/TestingServer
+2025-10-02 23:57:26: [INFO] Generic file watcher started
+2025-10-02 23:57:26: [INFO] Starting background initialization...
+2025-10-02 23:57:28: [INFO] Processing existing files in background...
+2025-10-02 23:57:28: [INFO] Starting efficient file scanning...
+2025-10-02 23:57:28: [INFO] Scanning directory structure: /home/kos/Desktop/TestingServer
+2025-10-02 23:57:28: [INFO] Found 0 images and 0 documents to process
+2025-10-02 23:57:28: [INFO] Running bulk image-document resolution...
+2025-10-02 23:57:28: [INFO] No filename index found
+2025-10-02 23:57:28: [INFO] File scan completed. Total processed: 0 files
+2025-10-02 23:57:28: [INFO] Immediate embedding generation mode enabled - embeddings will be generated when files are added
+2025-10-02 23:57:28: [INFO] Background initialization completed.
+2025-10-02 23:57:47: [WATCHER EVENT] File created: /home/kos/Desktop/TestingServer/1730684252315473.jpg
+2025-10-02 23:57:47: [ERROR] Failed to process image /home/kos/Desktop/TestingServer/1730684252315473.jpg: cannot identify image file '/home/kos/Desktop/TestingServer/1730684252315473.jpg'
+2025-10-02 23:57:47: [WATCHER EVENT] File modified: /home/kos/Desktop/TestingServer/1730684252315473.jpg
+2025-10-02 23:57:47: [INFO] Loading model OpenCLIP Laion5b for query
+2025-10-02 23:57:47: [INFO] Loading open_clip model: xlm-roberta-base-ViT-B-32
+2025-10-02 23:57:54: [SUCCESS] Model xlm-roberta-base-ViT-B-32 loaded successfully
+2025-10-02 23:57:54: [SUCCESS] Model OpenCLIP Laion5b loaded successfully
+2025-10-02 23:57:55: [INFO] Generated immediate embedding for image: /home/kos/Desktop/TestingServer/1730684252315473.jpg
+2025-10-02 23:57:55: [SUCCESS] Created index idx:image:OPENCLIPXLMRobertaBaseViTB32 with 1 documents
+2025-10-02 23:57:55: [INFO] Image index created successfully.
+2025-10-02 23:57:55: [ERROR] No documents found with prefix 'document:'. Cannot create index.
+2025-10-02 23:57:55: [INFO] Document index created successfully.
+2025-10-02 23:57:55: [WATCHER EVENT] File modified: /home/kos/Desktop/TestingServer/1730684252315473.jpg
+2025-10-02 23:57:55: [WATCHER EVENT] File modified: /home/kos/Desktop/TestingServer/1730684252315473.jpg
+2025-10-02 23:58:09: [SUCCESS] Search completed. Found 1 results
+2025-10-02 23:58:09: [INFO] Serving image: /home/kos/Desktop/TestingServer/1730684252315473.jpg
+2025-10-02 23:58:43: [INFO] Initializing Server...
+2025-10-02 23:58:43: [INFO] Server configuration loaded successfully.
+2025-10-02 23:58:43: [INFO] Loading active model: OpenCLIP Laion5b
+2025-10-02 23:58:43: [SUCCESS] Active model OpenCLIP Laion5b configured successfully
+2025-10-02 23:58:43: [SUCCESS] Connected to Redis at 192.168.1.51:6380/0
+2025-10-02 23:58:43: [INFO] Index already exists
+2025-10-02 23:58:43: [SUCCESS] Created index idx:image:OPENCLIPXLMRobertaBaseViTB32 with 1 documents
+2025-10-02 23:58:43: [INFO] Dynamic model loading enabled - model will be loaded on first query.
+2025-10-02 23:58:43: [INFO] Started watching directory: /home/kos/Desktop/TestingServer
+2025-10-02 23:58:43: [INFO] Generic file watcher started
+2025-10-02 23:58:43: [INFO] Starting background initialization...
+2025-10-02 23:58:45: [INFO] Processing existing files in background...
+2025-10-02 23:58:45: [INFO] Starting efficient file scanning...
+2025-10-02 23:58:45: [INFO] Scanning directory structure: /home/kos/Desktop/TestingServer
+2025-10-02 23:58:45: [INFO] Found 1 images and 0 documents to process
+2025-10-02 23:58:45: [INFO] Processing images in batches...
+2025-10-02 23:58:45: [INFO] Processing images batch 1: files 1-1 of 1
+2025-10-02 23:58:45: [INFO] Images processing completed. Processed 0 images
+2025-10-02 23:58:45: [INFO] Running bulk image-document resolution...
+2025-10-02 23:58:45: [INFO] Bulk resolution completed: 0 images resolved across 0 documents
+2025-10-02 23:58:45: [INFO] Resolved 0 images across 0 documents
+2025-10-02 23:58:45: [INFO] File scan completed. Total processed: 0 files
+2025-10-02 23:58:45: [INFO] Immediate embedding generation mode enabled - embeddings will be generated when files are added
+2025-10-02 23:58:45: [INFO] Background initialization completed.
+2025-10-02 23:58:55: [INFO] Loading model OpenCLIP Laion5b for query
+2025-10-02 23:58:55: [INFO] Loading open_clip model: xlm-roberta-base-ViT-B-32
+2025-10-02 23:59:00: [SUCCESS] Model xlm-roberta-base-ViT-B-32 loaded successfully
+2025-10-02 23:59:00: [SUCCESS] Model OpenCLIP Laion5b loaded successfully
+2025-10-02 23:59:00: [SUCCESS] Search completed. Found 1 results
+2025-10-02 23:59:05: [SUCCESS] Search completed. Found 1 results
+2025-10-02 23:59:07: [SUCCESS] Search completed. Found 1 results

@@ -214,6 +214,21 @@ async function perform_search() {
         
         const data = await response.json();
         
+        if (response.status === 202 && data.status === 'model_loading') {
+            show_model_loading_message(data.message);
+            
+            if (data.message.includes('now loading')) {
+                showInfo(
+                    'First Search Setup', 
+                    'Initializing AI model for the first time. Subsequent searches will be much faster!',
+                    { duration: 8000 }
+                );
+            }
+            
+            await poll_for_model_ready_and_search(body_data, endpoint);
+            return;
+        }
+        
         if (!response.ok) {
             throw new Error(data.error || `HTTP error! status: ${response.status}`);
         }
@@ -226,6 +241,104 @@ async function perform_search() {
     } finally {
         hide_loading();
     }
+}
+
+async function poll_for_model_ready_and_search(search_data, endpoint) {
+    const max_attempts = 60;
+    const poll_interval = 1000;
+    let attempts = 0;
+    
+    const poll_timer = setInterval(async () => {
+        attempts++;
+        
+        try {
+            const status_response = await fetch('/api/search/status');
+            const status_data = await status_response.json();
+            
+            if (status_data.ready_for_search) {
+                clearInterval(poll_timer);
+                
+                const notification_id = search_input.dataset.loadingNotificationId;
+                if (notification_id) {
+                    update_notification_message(
+                        notification_id, 
+                        'Model Ready', 
+                        'Model loaded successfully! Processing your search...'
+                    );
+                    
+                    setTimeout(() => {
+                        remove_notification(parseInt(notification_id));
+                        delete search_input.dataset.loadingNotificationId;
+                    }, 2000);
+                }
+                
+                show_loading();
+                
+                const search_response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(search_data),
+                    skipNotification: true
+                });
+                
+                const search_result = await search_response.json();
+                
+                if (search_response.ok) {
+                    display_results(search_result);
+                    
+                    showSuccess('Search Complete', `Found ${search_result.total} results for "${search_data.query}"`);
+                } else {
+                    throw new Error(search_result.error || `HTTP error! status: ${search_response.status}`);
+                }
+                
+                hide_loading();
+                return;
+            }
+            
+            let progress_message = `Loading model... (${attempts}s)`;
+            if (status_data.model_status === 'loading') {
+                progress_message = `AI model is loading, please wait... (${attempts}s elapsed)`;
+            }
+            
+            update_model_loading_message(progress_message);
+            
+            if (attempts >= max_attempts) {
+                clearInterval(poll_timer);
+                
+                const notification_id = search_input.dataset.loadingNotificationId;
+                if (notification_id) {
+                    update_notification_message(
+                        notification_id, 
+                        'Loading Timeout', 
+                        'Model loading is taking longer than expected. Please try again.'
+                    );
+                    
+                    setTimeout(() => {
+                        remove_notification(parseInt(notification_id));
+                        delete search_input.dataset.loadingNotificationId;
+                        showError('Model Loading Timeout', 'Model loading timeout - please try again later');
+                    }, 3000);
+                }
+                
+                throw new Error('Model loading timeout - please try again later');
+            }
+            
+        } catch (error) {
+            clearInterval(poll_timer);
+            console.error('Polling error:', error);
+            
+            const notification_id = search_input.dataset.loadingNotificationId;
+            if (notification_id) {
+                remove_notification(parseInt(notification_id));
+                delete search_input.dataset.loadingNotificationId;
+            }
+            
+            show_error_message(`Search failed: ${error.message}`);
+            hide_loading();
+        }
+    }, poll_interval);
 }
 
 function display_results(data) {
@@ -372,12 +485,85 @@ function show_loading() {
     loading_indicator.style.display = 'flex';
     search_button.disabled = true;
     search_button.textContent = 'Searching...';
+    search_button.classList.add('loading');
 }
 
 function hide_loading() {
     loading_indicator.style.display = 'none';
     search_button.disabled = false;
     search_button.textContent = 'Search';
+    search_button.classList.remove('loading');
+    hide_model_loading();
+}
+
+function show_model_loading_message(message) {
+    hide_all_result_elements();
+    
+    const loading_notification_id = showInfo(
+        'Model Loading', 
+        'The AI model is loading. Please wait while we prepare your search...', 
+        { persistent: true, duration: 0 }
+    );
+    
+    search_input.dataset.loadingNotificationId = loading_notification_id;
+    
+    let model_loading_indicator = document.getElementById('model_loading_indicator');
+    if (!model_loading_indicator) {
+        model_loading_indicator = document.createElement('div');
+        model_loading_indicator.id = 'model_loading_indicator';
+        model_loading_indicator.className = 'model-loading-container';
+        
+        const loading_icon = document.createElement('div');
+        loading_icon.className = 'loading-spinner';
+        
+        const loading_text = document.createElement('div');
+        loading_text.className = 'loading-text';
+        loading_text.id = 'model_loading_text';
+        
+        const loading_subtext = document.createElement('div');
+        loading_subtext.className = 'loading-subtext';
+        loading_subtext.textContent = 'This may take a few moments...';
+        
+        model_loading_indicator.appendChild(loading_icon);
+        model_loading_indicator.appendChild(loading_text);
+        model_loading_indicator.appendChild(loading_subtext);
+        
+        loading_indicator.parentNode.insertBefore(model_loading_indicator, loading_indicator.nextSibling);
+    }
+    
+    document.getElementById('model_loading_text').textContent = message;
+    model_loading_indicator.style.display = 'flex';
+    
+    search_button.disabled = true;
+    search_button.textContent = 'Loading Model...';
+    search_button.classList.add('loading');
+}
+
+function update_model_loading_message(message) {
+    const loading_text = document.getElementById('model_loading_text');
+    if (loading_text) {
+        loading_text.textContent = message;
+    }
+    
+    const notification_id = search_input.dataset.loadingNotificationId;
+    if (notification_id) {
+        update_notification_message(notification_id, 'Model Loading', message);
+    }
+}
+
+function hide_model_loading() {
+    const model_loading_indicator = document.getElementById('model_loading_indicator');
+    if (model_loading_indicator) {
+        model_loading_indicator.style.display = 'none';
+    }
+    
+    search_button.classList.remove('loading');
+    
+    const notification_id = search_input.dataset.loadingNotificationId;
+    if (notification_id) {
+        remove_notification(parseInt(notification_id));
+        delete search_input.dataset.loadingNotificationId;
+    }
 }
 
 function show_results() {
@@ -415,6 +601,11 @@ function hide_all_result_elements() {
     loading_indicator.style.display = 'none';
     no_results.style.display = 'none';
     results_list.style.display = 'none';
+    
+    const model_loading_indicator = document.getElementById('model_loading_indicator');
+    if (model_loading_indicator) {
+        model_loading_indicator.style.display = 'none';
+    }
 }
 
 function get_search_mode() {
@@ -429,11 +620,20 @@ function open_google_comparison() {
         return;
     }
     
+    // Date range configuration
+    // Needs to be in MM/DD/YY format for Google
+    const start_date = '01/01/16';
+    const end_date = '03/31/25';
+    
+    const encoded_start = encodeURIComponent(start_date);
+    const encoded_end = encodeURIComponent(end_date);
+    
     const encoded_query = encodeURIComponent(query);
     
     // Construct Google Images search URL with site restriction to presidencia.pt
     // Using &udm=2 parameter for Google Images search
-    const google_url = `https://www.google.com/search?q=${encoded_query}+site%3Apresidencia.pt&udm=2&hl=en`;
+    // Using &tbs=cdr%3A1%2Ccd_min%3A...%2Ccd_max%3A... for date range
+    const google_url = `https://www.google.com/search?q=${encoded_query}+site%3Apresidencia.pt&udm=2&hl=en&tbs=cdr%3A1%2Ccd_min%3A${encoded_start}%2Ccd_max%3A${encoded_end}`;
     
     window.open(google_url, '_blank', 'noopener,noreferrer');
 }

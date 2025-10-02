@@ -99,6 +99,24 @@ function remove_notification(id) {
     }, 300);
 }
 
+function update_notification_message(id, new_title, new_message) {
+    const notification = notification_list.get(id);
+    if (!notification) return;
+
+    const title_element = notification.element.querySelector('.notification-title');
+    const message_element = notification.element.querySelector('.notification-message');
+    
+    if (title_element && new_title) {
+        title_element.textContent = new_title;
+        notification.title = new_title;
+    }
+    
+    if (message_element && new_message) {
+        message_element.textContent = new_message;
+        notification.message = new_message;
+    }
+}
+
 function clear_all_notifications() {
     Array.from(notification_list.keys()).forEach(id => {
         remove_notification(id);
@@ -196,3 +214,5 @@ window.showWarning = showWarning;
 window.showSuccess = showSuccess;
 window.showInfo = showInfo;
 window.clear_all_notifications = clear_all_notifications;
+window.remove_notification = remove_notification;
+window.update_notification_message = update_notification_message;

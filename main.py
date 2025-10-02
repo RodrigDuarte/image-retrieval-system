@@ -32,13 +32,33 @@ def search():
             return jsonify({"error": "Search query is required"}), 400
 
         model_status = s.controller.get_model_status(s.model_alias)
-        if model_status != 2:  # ModelStatus.LOADED = 2
+
+        if model_status == 1:
             return jsonify(
                 {
-                    "error": f"Default model '{s.model_alias}' is not loaded",
-                    "suggestion": f"Use POST /api/models/{s.model_alias}/load to load the model first",
+                    "status": "model_loading",
+                    "message": f"Model '{s.model_alias}' is currently loading",
+                    "suggestion": "Please wait and check /api/search/status or retry in a few moments",
                 }
-            ), 503
+            ), 202
+
+        if not s.ensure_model_loaded():
+            model_status = s.controller.get_model_status(s.model_alias)
+            if model_status == 1:
+                return jsonify(
+                    {
+                        "status": "model_loading",
+                        "message": f"Model '{s.model_alias}' is now loading",
+                        "suggestion": "Please wait and check /api/search/status or retry in a few moments",
+                    }
+                ), 202  # Accepted
+            else:
+                return jsonify(
+                    {
+                        "error": f"Failed to load model '{s.model_alias}'",
+                        "suggestion": "Check server logs for details or try POST /api/model/load",
+                    }
+                ), 503
 
         results = s.controller.search(s.model_alias, query, top_k=max_results)
 
@@ -93,12 +113,32 @@ def search_complex():
             return jsonify({"error": "Search query is required"}), 400
 
         model_status = s.controller.get_model_status(s.model_alias)
-        if model_status != 2:  # ModelStatus.LOADED = 2
+
+        if model_status == 1:  # ModelStatus.LOADING
             return jsonify(
                 {
-                    "error": f"Model '{s.model_alias}' is not loaded",
+                    "status": "model_loading",
+                    "message": f"Model '{s.model_alias}' is currently loading",
+                    "suggestion": "Please wait and check /api/search/status or retry in a few moments",
                 }
-            ), 503
+            ), 202
+
+        if not s.ensure_model_loaded():
+            model_status = s.controller.get_model_status(s.model_alias)
+            if model_status == 1:
+                return jsonify(
+                    {
+                        "status": "model_loading",
+                        "message": f"Model '{s.model_alias}' is now loading",
+                        "suggestion": "Please wait and check /api/search/status or retry in a few moments",
+                    }
+                ), 202
+            else:
+                return jsonify(
+                    {
+                        "error": f"Failed to load model '{s.model_alias}'",
+                    }
+                ), 503
 
         hybrid_error = None
 
@@ -216,6 +256,28 @@ def search_complex():
         return jsonify({"error": str(e)}), 500
 
 
+@s.app.route("/api/search/status", methods=["GET"])
+def search_status():
+    """Get current search/model status for dynamic loading"""
+    try:
+        model_status = s.controller.get_model_status(s.model_alias)
+        dynamic_status = s.get_dynamic_loading_status()
+
+        status_info = {
+            "model_alias": s.model_alias,
+            "model_status": {0: "unloaded", 1: "loading", 2: "loaded"}.get(
+                model_status, "unknown"
+            ),
+            "model_status_code": model_status,
+            "dynamic_loading": dynamic_status,
+            "ready_for_search": model_status == 2,
+        }
+
+        return jsonify(status_info)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @s.app.route("/api/status")
 def status():
     """Server status and statistics endpoint"""
@@ -229,6 +291,7 @@ def status():
         model_status_text = {0: "UNLOADED", 1: "LOADING", 2: "LOADED"}.get(
             model_status, "UNKNOWN"
         )
+        dynamic_loading_status = s.get_dynamic_loading_status()
 
         return jsonify(
             {
@@ -237,6 +300,7 @@ def status():
                 "version": s.version,
                 "redis_connected": s.rc is not None,
                 "model": {"alias": s.model_alias, "status": model_status_text},
+                "dynamic_loading": dynamic_loading_status,
                 "statistics": stats,
                 "embedding_schedule": schedule_status,
             }
